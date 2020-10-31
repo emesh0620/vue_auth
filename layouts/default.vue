@@ -103,10 +103,10 @@ export default {
   },
   data () {
     return {
+      show: false,
       clipped: false,
       drawer: false,
       fixed: false,
-      show: false,
       items: [
         {
           icon: 'mdi-apps',
@@ -131,6 +131,7 @@ export default {
       return this.$store.getters['user']
     },
   },
+  /*
   mounted: function(){
 
     firebase.auth().getRedirectResult().then(result => { 
@@ -141,7 +142,7 @@ export default {
       } 
     }); 
 
-  },
+  },*/
 }
 </script>
 <style lang="scss" scoped>

@@ -30,13 +30,15 @@
 
     methods : {
         logout(){
-            firebase.auth().signOut().then(()=>{
+            console.log("ログアウトしました");
+            this.$store.commit('reset_vuex_state');
+            /*firebase.auth().signOut().then(()=>{
                 console.log("ログアウトしました");
-                this.$store.commit('reset_vuex_state');
+                //this.$store.commit('reset_vuex_state');
             })
             .catch( (error)=>{
                 console.log(`ログアウト時にエラーが発生しました (${error})`);
-            });
+            });?*/
             
         }
         

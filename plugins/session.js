@@ -6,7 +6,7 @@ export default ({ store }) => {
         createPersistedState({
             key: 'login_session',
             paths: [
-                "user"
+                "message"
             ]
         })(store)
     })

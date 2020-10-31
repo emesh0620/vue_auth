@@ -4,6 +4,7 @@ const user = {
     uid: '',
     email: '',
     login: false,
+    save:  false,
 }
 
 export const state = () => ({ user })
@@ -52,6 +53,8 @@ export const mutations = {
     
     reset_vuex_state(state) {
         state.user = user
-        this.$router.push('/login')
+        firebase.auth().signOut().then(()=>{
+            console.log("ログアウトしました");
+        })
     },
 }

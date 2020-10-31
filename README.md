@@ -2,19 +2,19 @@
 
 ## Build Setup
 
-```bash
-# install dependencies
-$ npm install
+下記の内容をコピーし、plugin/firebase.jsに保存してください。
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+```firebase
+import firebase from "firebase/app"
+require('firebase/auth')
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+if (!firebase.apps.length) {
+    firebase.initializeApp({
+        /*ここに設定をコピーすること*/
+    })
+}
 
-# generate static project
-$ npm run generate
+export default firebase
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
